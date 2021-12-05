@@ -1,0 +1,164 @@
+<html>
+<title>Home Page</title>
+
+<!--Lets dance in style, Lets dance for a while---->
+<style>
+.descrip{
+
+	text-align:center;
+	font-size:30px;
+	text-align:center;
+	top: 55%;
+	left: 50%;
+	position: absolute;
+	padding: 15px 32px;
+	position: absolute;
+	transform: translate(-50%,-50%);
+
+}
+	figure {
+    margin: 0;
+	text-align:center;
+	top: 45%;
+	left: 50%;
+	position: absolute;
+	padding: 15px 32px;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url('OpenSymbol.woff');
+  
+}
+
+div {
+  font-family: myFirstFont;
+  
+}
+.button {
+  background-color: #A1B2C3;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  	top: 30%;
+	left: 50%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+body {
+	background-image: url("background.jpg");
+    /* Full height */
+	height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+	text-align :center;
+	-webkit-transform: translate(-50%,-50%);
+	src: url('OpenSymbol.woff') format('woff');
+	transform: translate(-50%,-50%);
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	background-color: gray;
+	input[type=text]:focus {
+	background-color: lightblue;
+	text-size:30px;
+}
+ 
+
+
+
+</style>
+
+<body>
+<div class="topnav">
+  <a class="active" href="index.html">Home</a>
+  <a href="https://13tv.co.il/news/">חדשות</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+</div>
+<div class="title">
+	<h1 id="title">	
+		W e l c om e 
+	</h1>
+	    <input type="text" placeholder="Type your name..." id="myInput">
+		<button id='btn' type="button" onclick="getInputValue();">Go</button>
+</div>
+
+ 
+ 		<a href="signup.html" class="button">Sign-Up</a>
+ 
+<figure>
+    <figcaption>השיר האהוב עליי :</figcaption>
+    <audio
+        controls
+        src="paradise city.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</figure>
+
+<p class="descrip">
+Artist: Guns N' Roses <br>
+Album: Appetite for Destruction <br>
+Released: 1987 <br> 
+Nominations: Brit Award for British Video of the Year, MTV Video Music Award for Best Stage Performance in a Video
+</p>
+    <script>
+        function getInputValue(){
+            // Selecting the input element and get its value 
+            var inputVal = document.getElementById("myInput").value;
+				document.getElementById("title").innerHTML = "Welcome " + inputVal;
+				
+            // Displaying the value
+            //alert("Welcome "+inputVal+"!");
+			document.getElementById("btn").disabled = true;//מכבה את הכפתור אחיר הליחצה
+			document.getElementById("myInput").value = '';
+			document.getElementById("myInput").placeholder = '';
+			document.getElementById("myInput").disabled = true;
+		}
+		
+		
+    </script>
+</body>
+</html>
